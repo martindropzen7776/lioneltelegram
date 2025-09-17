@@ -34,29 +34,33 @@
     background-repeat: no-repeat; /* Evita que se repita */
 }
 
-        .button {
-            position: absolute;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            text-align: center;
-            width: 298px;
-            padding: 17px 20px;
-            top: 47%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 20px;
-            font-weight: bold;
-            font-family: 'Agharti', sans-serif; /* Aplica la fuente local */
-            color: black;
-            background: #FFFFFF;
-            border: none;
-            border-radius: 12px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            text-decoration: none;
-        }
+       .button-container {
+    position: absolute;
+    top: 47%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 20px; /* espacio entre botones */
+}
 
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-align: center;
+    width: 298px;
+    padding: 17px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Agharti', sans-serif;
+    color: black;
+    background: #FFFFFF;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+}
         .button:hover {
             background: #343587;
             color: white;
@@ -108,9 +112,10 @@
 
 
         
-        <a href="https://t.me/+541123363932" class="button">
-            ¡CREA TU USUARIO EN TELGRAM! <i class="fab fa-telegram-plane"></i>
-        </a>
+<div class="button-container">
+  <a href="#" class="button">Botón 1</a>
+  <a href="#" class="button">Botón 2</a>
+</div>
     </div>
 </body>
 </html>
