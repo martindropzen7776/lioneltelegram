@@ -11,14 +11,7 @@
     html, body { height:100%; }
 
     /* Contenedor con imagen de fondo */
-    .landing{
-      position: relative;
-      width:100%;
-      height:100%;
-      background: #1b8dc3 url('fondo.jpeg') no-repeat center center; /* usa cover para cubrir toda la pantalla */
-      /* si querés ver toda la imagen sin recortes, cambiá cover -> contain y agregá background-color */
-      /* background: #1b8dc3 url('fondo.jpeg') no-repeat center center / contain; */
-    }
+.landing { position: relative; width: 100%; height: 100%; background-image: url('fondo.jpeg'); background-size: contain; /* Se asegura de mostrar todo */ background-position: center; background-repeat: no-repeat; /* Evita que se repita */ }
 
     /* Botón centrado */
     .button-container{
