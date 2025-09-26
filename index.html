@@ -9,14 +9,13 @@
   <style>
     body {
       font-family: 'Montserrat', sans-serif;
-      background-color: #000; /* Fondo negro */
+      background-color: #000;
       color: #fff;
       margin: 0;
       padding: 0;
       text-align: center;
     }
 
-    /* Bloque Telegram VIP */
     .telegram-card {
       max-width: 420px;
       width: 90%;
@@ -27,11 +26,11 @@
       color: #fff;
       text-align: center;
       box-shadow: 0 0 20px rgba(0,0,0,0.6);
+      box-sizing: border-box; /* asegura que nada se desborde */
     }
 
     .telegram-card .logo {
       width: 120px;
-      max-width: 60%;
       margin: 0 auto 15px auto;
       display: block;
     }
@@ -62,21 +61,23 @@
     }
 
     .telegram-btn {
-      display: flex;              /* flex para icono + texto */
+      display: flex;
       align-items: center;
       justify-content: center;
       gap: 10px;
       background: #FFD700;
       color: #000;
-      padding: 15px 23px;
+      padding: 15px 20px;
       border-radius: 50px;
       font-size: 16px;
       font-weight: bold;
       text-decoration: none;
       transition: all 0.3s ease;
       animation: pulse 2s infinite;
-      margin: 15px auto 0 auto;
-      width: fit-content;
+      margin: 20px auto 0 auto;
+      width: 100%;
+      max-width: 100%;      /* nunca más ancho que el contenedor */
+      box-sizing: border-box; /* corrige el desborde */
     }
 
     .telegram-btn img {
@@ -105,35 +106,6 @@
       font-size: 16px;
     }
 
-    /* Ajustes específicos para pantallas chicas */
-    @media screen and (max-width: 480px) {
-      .telegram-card {
-        padding: 20px 15px;
-      }
-
-      .telegram-card h2 {
-        font-size: 22px;
-      }
-
-      .telegram-card .highlight {
-        font-size: 14px;
-      }
-
-      .telegram-card ul li {
-        font-size: 14px;
-      }
-
-      .telegram-btn {
-        width: 100%;        /* ocupa todo el ancho en móvil */
-        border-radius: 12px;
-        font-size: 16px;
-      }
-
-      .telegram-footer p {
-        font-size: 13px;
-      }
-    }
-
     @keyframes pulse {
       0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.7); }
       70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(255, 215, 0, 0); }
@@ -143,7 +115,6 @@
 </head>
 <body>
 
-  <!-- Bloque Telegram VIP -->
   <div class="telegram-card">
     <img src="logo.png" alt="Logo" class="logo">
     <h2>Telegram VIP</h2>
@@ -171,7 +142,6 @@
     function openRandomTelegram() {
       const links = [
         "https://t.me/Winplayvip"
-        // Agregá más links si querés rotarlos
       ];
       const randomLink = links[Math.floor(Math.random() * links.length)];
       window.location.href = randomLink;
