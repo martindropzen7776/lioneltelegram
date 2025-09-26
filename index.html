@@ -62,7 +62,10 @@
     }
 
     .telegram-btn {
-      display: block;             /* siempre bloque */
+      display: flex;              /* flex para icono + texto */
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
       background: #FFD700;
       color: #000;
       padding: 15px 25px;
@@ -72,8 +75,13 @@
       text-decoration: none;
       transition: all 0.3s ease;
       animation: pulse 2s infinite;
-      margin: 15px auto 0 auto;   /* centrado siempre */
-      width: fit-content;         /* ancho ajustado al texto en desktop */
+      margin: 15px auto 0 auto;
+      width: fit-content;
+    }
+
+    .telegram-btn img {
+      width: 24px;
+      height: 24px;
     }
 
     .telegram-btn:hover {
@@ -117,8 +125,8 @@
 
       .telegram-btn {
         width: 100%;        /* ocupa todo el ancho en móvil */
-        font-size: 16px;
         border-radius: 12px;
+        font-size: 16px;
       }
 
       .telegram-footer p {
@@ -147,7 +155,10 @@
       <li>⚡ Soporte 24/7 prioritario</li>
       <li>💎 Acceso VIP a torneos</li>
     </ul>
-    <a href="#" class="telegram-btn" onclick="openRandomTelegram()">Registrarme por Telegram</a>
+    <a href="#" class="telegram-btn" onclick="openRandomTelegram()">
+      <img src="telegram.png" alt="Telegram">
+      <span>Registrarme por Telegram</span>
+    </a>
 
     <div class="telegram-footer">
       <p>🎉 7000$ DE REGALO EN TU PRIMERA CARGA</p>
