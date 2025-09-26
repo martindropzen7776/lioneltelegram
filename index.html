@@ -28,8 +28,8 @@
       box-shadow: 0 0 20px rgba(0,0,0,0.6);
     }
 
-    .telegram-card img {
-      width: 80px;
+    .telegram-card .logo {
+      width: 120px;
       margin-bottom: 15px;
     }
 
@@ -75,6 +75,21 @@
       transform: scale(1.05);
     }
 
+    .telegram-footer {
+      margin-top: 25px;
+      font-size: 16px;
+    }
+
+    .telegram-footer p {
+      margin: 5px 0;
+    }
+
+    .telegram-footer p:first-child {
+      font-weight: bold;
+      color: #FFD700;
+      font-size: 18px;
+    }
+
     @keyframes pulse {
       0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.7); }
       70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(255, 215, 0, 0); }
@@ -86,7 +101,7 @@
 
   <!-- Bloque Telegram VIP -->
   <div class="telegram-card">
-    <img src="telegram.png" alt="Telegram VIP">
+    <img src="logo.png" alt="Logo" class="logo">
     <h2>Telegram VIP</h2>
     <p class="highlight">✨ MÁS BENEFICIOS ✨</p>
     <p class="highlight">✨ MÁS BONOS SIEMPRE ✨</p>
@@ -97,6 +112,12 @@
       <li>💎 Acceso VIP a torneos</li>
     </ul>
     <a href="#" class="telegram-btn" onclick="openRandomTelegram()">Registrarme por Telegram</a>
+
+    <div class="telegram-footer">
+      <p>🎉 7000$ DE REGALO EN TU PRIMERA CARGA</p>
+      <p>💰 Mínimo de carga $2000</p>
+      <p>⏰ Retiros las 24hs sin límites</p>
+    </div>
   </div>
 
   <script>
